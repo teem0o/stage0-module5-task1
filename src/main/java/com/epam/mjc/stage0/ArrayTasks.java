@@ -11,7 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-
+        return new String[]{"winter","spring","summer","autumn"};
     }
 
     /**
@@ -25,7 +25,12 @@ public class ArrayTasks {
      * length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-
+        int[] ints = new int[length];
+        int j = 1;
+        for (int i = 0; i<length; i++,j++){
+            ints[i]=j;
+        }
+        return ints;
     }
 
     /**
@@ -37,7 +42,11 @@ public class ArrayTasks {
      * arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
-
+        int s=0;
+        for (int i=0;i<arr.length;i++){
+            s+=arr[i];
+        }
+        return s;
     }
 
     /**
@@ -50,7 +59,12 @@ public class ArrayTasks {
      * arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-
+        for (int i=0;i<arr.length;i++){
+            if (arr[i]==number){
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -63,7 +77,13 @@ public class ArrayTasks {
      * arr = ["pineapple", "apple", "pen"] -> ["pen", "apple", "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-
+        String[] rev = new String[arr.length];
+        int j = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            rev[j - 1] = arr[i];
+            j = j - 1;
+        }
+        return rev;
     }
 
     /**
@@ -78,7 +98,15 @@ public class ArrayTasks {
      * arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-
+        int[] arr2 = new int[arr.length];
+        int j=0;
+        for (int i=0;i<arr.length;i++){
+            if (arr[i]>0){
+                arr2[j]=arr[i];
+                j++;
+            }
+        }
+        return arr2;
     }
 
     /**
@@ -92,6 +120,6 @@ public class ArrayTasks {
      * arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-
+        return null;
     }
 }
